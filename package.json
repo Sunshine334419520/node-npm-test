@@ -10,7 +10,7 @@
   "scripts": {
     "install": "prebuild-install --runtime napi || node-gyp rebuild",
     "prebuild": "prebuild --runtime napi --all --verbose",
-    "prebuild-upload": "prebuild --runtime napi --upload-all",
+    "prebuild-upload": "prebuild --runtime napi --upload-all ${GITHUB_TOKEN}",
     "gypconfigure": "node-gyp configure"
   },
   "binary": {
