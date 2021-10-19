@@ -1,0 +1,37 @@
+{
+  "name": "npm-test",
+  "version": "1.0.0",
+  "description": "node test",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sunshine334419520/node-npm-test.git"
+  },
+  "scripts": {
+    "install": "prebuild-install --runtime napi || node-gyp rebuild",
+    "prebuild": "prebuild --runtime napi --all --verbose",
+    "prebuild-upload": "prebuild --runtime napi --upload-all",
+    "gypconfigure": "node-gyp configure"
+  },
+  "binary": {
+    "napi_versions": [
+      3
+    ]
+  },
+  "author": "yang8guang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sunshine334419520/node-npm-test/issues"
+  },
+  "homepage": "https://github.com/Sunshine334419520/node-npm-test#readme",
+  "dependencies": {
+    "bindings": "^1.5.0",
+    "node-addon-api": "^3.0.2",
+    "node-gyp": "^8.2.0",
+    "prebuild-install": "6.0.0"
+  },
+  "devDependencies": {
+    "prebuild": "^11.0.0"
+  },
+  "gypfile": true
+}
